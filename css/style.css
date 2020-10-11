@@ -428,6 +428,7 @@ main #blog article p {
     display: block; /* al ser un elemento en línea hay que convertirlo en bloque para que funcione */
 }
 
+
 @media(min-width: 48.000em) {
     #blog article {
         width: 33%;
@@ -449,31 +450,118 @@ main #blog article p {
 
 
 #menu {
-    background-color: green;
+    background-color: var(--color-secundario);
 } 
+#menu .row {
+    flex-wrap: wrap;   
+}
+
+#menu h2 {
+    color:white;
+}
+
+
+#menu #todaysmenu nav {
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+#todaysmenu nav .column ul li {
+    width:100%;
+    padding: 20px 10px;
+}
+
+#todaysmenu nav .column ul li a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}
+
+#todaysmenu nav .column ul li a:hover {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+#todaysmenu nav .column ul li:hover {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+.row #todaysmenu .hotoffers .underline {
+    position: absolute;
+    margin-top: 5px;
+}
+
+.row #todaysmenu .hotoffers .parrafo {
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+#menu .row .platos {
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+#menu .row .platos .foto {
+    margin-bottom: 40px;
+    margin-left: 10px;
+}
+
+#menu .row .platos .foto .texto {
+    margin-top: 40px;
+}
+
+#menu .row .platos .foto .texto .preciocomida {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+#menu .row .platos .foto .texto .preciocomida:first-child {
+    width: 80%;
+}
+
+#menu .row .platos .foto .texto .preciocomida:last-child {
+    width: 20%;
+}
+
+#menu .row .platos .foto .texto .preciocomida .descripcion {
+    display: inline-block;
+}
+
+#menu .row .platos .foto .texto .preciocomida .precio {
+    display: inline-block;
+}
 
 #menu section.container h2 {
     color: white;
 }
 
-#menu .row {
-    flex-wrap: wrap;
-}
 section.container nav .column a {
     color: white;
 }
 
 #menu section div h3 {
     color: white;
+    font-weight: bold;
 }
+
 #menu section div p {
     color: white;
+    font-size: small;
 }
 
 #menu section div .foto {
     
-    width: 60%;
+    width: 100%;
 }
+
 #menu section div .row {
     justify-content: space-between;
 }
@@ -482,7 +570,6 @@ section.container nav .column a {
     color: var(--color-principal);
 }
 
-
 .enlace {
     text-decoration: none;
     color: var(--color-principal);
@@ -490,16 +577,37 @@ section.container nav .column a {
     display: block; /* al ser un elemento en línea hay que convertirlo en bloque para que funcione */
 }
 
+#menu section .row .arriba {
+    background-color: var(--color-principal);
+    color: white;
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+}
+
+.foto .row {
+    flex-wrap: wrap;
+}
+
+
 @media (min-width: 48em) {
-    #menu .row>div:first-child {
-        width: 40%;
+    
+   #menu .row #todaysmenu {
+    width: 40%;
+    }   
+    #menu .row .platos {
+    width: 60%;
     }
-    #menu .row>div:last-child {
-        width: 60%;
+
+    .foto .row .imagen {
+    width: 20%;
     }
-   #menu .row {
-       flex-wrap: wrap;
-   }
+    .foto .row .texto {
+    width: 80%;
+    }
+    #menu .row .platos .foto .texto {
+        margin-top: 20px;
+    }
 }
 
 
